@@ -1,9 +1,9 @@
-import Document, { Html, Head, Main, NextScript } from 'next/document'
+import Document, {Head, Html, Main, NextScript} from 'next/document'
 
 class MyDocument extends Document {
     static async getInitialProps(ctx) {
         const initialProps = await Document.getInitialProps(ctx)
-        return { ...initialProps }
+        return {...initialProps}
     }
 
     render() {
@@ -13,8 +13,8 @@ class MyDocument extends Document {
                     <link rel="stylesheet" href="https://rsms.me/inter/inter.css"/>
                 </Head>
                 <body className="debug-screens">
-                <Main />
-                <NextScript />
+                    <Main/>
+                    <NextScript/>
                 </body>
             </Html>
         )
