@@ -1,6 +1,9 @@
-import ProgressiveImageLoader from "components/ProgressiveImageLoader";
+import ProgressiveImageLoader from "components/ProgressiveImageLoader"
+import Link from 'next/link'
+import ROUTES from "../utils/Routes";
 
 export default function Home() {
+
     return (
         <div className="relative bg-gray-50">
             <main className="lg:relative">
@@ -11,22 +14,28 @@ export default function Home() {
                             <span className="block text-indigo-600">Inventor for life</span>
                         </h1>
                         <p className="mt-3 max-w-md mx-auto text-lg text-gray-500 sm:text-xl md:mt-5 md:max-w-3xl">
-                            I'm passionate about new technology and an advocate for mentoring. Some of my favorite projects include a responsive store front for cake pops,
+                            I'm passionate about new technology and an advocate for mentoring. Some of my favorite
+                            projects include a responsive store front for cake pops,
                             automating the scraping of Chinese novels, and creating a new framework
-                            to package native desktop apps. Come take a look at who I am and what I've done.
+                            to package native desktop apps. I've also recently launched a YouTube channel to teach
+                            Python. Come take a look at who I am and what I've done.
                         </p>
                         <div className="mt-10 flex justify-center lg:justify-start">
                             <div className="mt-3 rounded-md shadow mt-0 ml-3">
-                                <a href="#"
-                                   className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10">
-                                    Explore Portfolio
-                                </a>
+                                <Link href={ROUTES.EXPLORE_PORTFOLIO}>
+                                    <a
+                                        className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10">
+                                        Explore Portfolio
+                                    </a>
+                                </Link>
                             </div>
                             <div className="mt-3 rounded-md shadow mt-0 ml-3">
-                                <a href="#"
-                                   className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10">
-                                    View Resume
-                                </a>
+                                <Link href={ROUTES.VIEW_RESUME}>
+                                    <a
+                                        className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10">
+                                        View Resume
+                                    </a>
+                                </Link>
                             </div>
                         </div>
                     </div>

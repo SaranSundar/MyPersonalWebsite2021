@@ -7,12 +7,15 @@ class MyDocument extends Document {
     }
 
     render() {
+
+        let showDebugUI = process.env.debug === true ? "debug-screens" : ""
+
         return (
             <Html>
                 <Head>
                     <link rel="stylesheet" href="https://rsms.me/inter/inter.css"/>
                 </Head>
-                <body className="debug-screens">
+                <body className={showDebugUI}>
                     <Main/>
                     <NextScript/>
                 </body>
