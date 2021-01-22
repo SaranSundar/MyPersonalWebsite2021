@@ -11,7 +11,11 @@ export default function Home() {
                             <span className="block text-indigo-600">Inventor for life</span>
                         </h1>
                         <p className="mt-3 max-w-md mx-auto text-lg text-gray-500 sm:text-xl md:mt-5 md:max-w-3xl">
-                            Imagine what you want to achieve tomorrow, then reach out and realize it today
+                            I love working on new ideas and being an early adopter of frameworks and languages which has
+                            served me well over the years. Whether that's building a store front for cake pops,
+                            automating the download of chinese novels for me and my friends, or creating a new framework
+                            to make native desktop apps. Come take a look at who I am and what I've done as a person and
+                            as a proud Software Engineer.
                         </p>
                         <div className="mt-10 flex justify-center lg:justify-start">
                             <div className="mt-3 rounded-md shadow mt-0 ml-3">
