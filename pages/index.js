@@ -1,8 +1,8 @@
 import ProgressiveImageLoader from "components/ProgressiveImageLoader"
 import Link from 'next/link'
-import ROUTES from "../utils/Routes";
+import ROUTES from "utils/Routes";
 
-export default function Home() {
+export default function HomePage() {
 
     return (
         <div className="relative bg-gray-50">

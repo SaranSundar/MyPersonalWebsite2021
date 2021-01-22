@@ -2,7 +2,7 @@ import GithubSVG from "public/images/navbar/github.svg"
 import YoutubeSVG from "public/images/navbar/youtube.svg"
 import LinkedinSVG from "public/images/navbar/linkedin.svg"
 import Link from 'next/link'
-import ROUTES from "../utils/Routes";
+import ROUTES from "utils/Routes";
 
 const NavBar = () => {
 
