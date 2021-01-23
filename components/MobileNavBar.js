@@ -2,16 +2,32 @@ import {Menu, Transition} from "@headlessui/react";
 import GithubSVG from "public/images/navbar/github.svg"
 import YoutubeSVG from "public/images/navbar/youtube.svg"
 import LinkedinSVG from "public/images/navbar/linkedin.svg"
-import {openInNewTab} from "../utils/Utils";
+import {openInNewTab} from 'utils/Utils'
+import {useRouter} from 'next/router'
+import {PAGE_ROUTES} from "utils/Routes"
+import {useEffect} from "react";
 
 export default function MobileNavBar() {
+    const router = useRouter()
+
+    const handleClick = async (e) => {
+        e.preventDefault()
+        await router.push(e.target.href)
+    }
+
+    useEffect(() => {
+        router.prefetch(PAGE_ROUTES.EXPLORE_PORTFOLIO)
+        router.prefetch(PAGE_ROUTES.VIEW_RESUME)
+        router.prefetch(PAGE_ROUTES.HOME)
+        router.prefetch(PAGE_ROUTES.ABOUT_ME)
+    }, [])
+
     return (
         <div className="-mr-2 flex items-center justify-center z-50 sm:hidden">
             <div className="relative inline-block text-left">
                 <Menu>
                     {({open}) => (
                         <>
-                            {console.log("OPEN IS " + open)}
                             <span className="rounded-md shadow-sm">
                                 <Menu.Button
                                     className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
@@ -52,12 +68,12 @@ export default function MobileNavBar() {
                                     <div className="py-1">
                                         <Menu.Item>
                                             {({active}) => (
-                                                <a
-                                                    className={`${
-                                                        active
-                                                            ? "bg-gray-100 text-gray-900"
-                                                            : "text-gray-700"
-                                                    } flex justify-between w-full px-4 py-2 text-sm leading-5 text-left cursor-pointer`}
+                                                <a href={PAGE_ROUTES.EXPLORE_PORTFOLIO} onClick={handleClick}
+                                                   className={`${
+                                                       active
+                                                           ? "bg-gray-100 text-gray-900"
+                                                           : "text-gray-700"
+                                                   } flex justify-between w-full px-4 py-2 text-sm leading-5 text-left cursor-pointer`}
                                                 >
                                                     Explore Portfolio
                                                 </a>
@@ -65,12 +81,12 @@ export default function MobileNavBar() {
                                         </Menu.Item>
                                         <Menu.Item>
                                             {({active}) => (
-                                                <a
-                                                    className={`${
-                                                        active
-                                                            ? "bg-gray-100 text-gray-900"
-                                                            : "text-gray-700"
-                                                    } flex justify-between w-full px-4 py-2 text-sm leading-5 text-left cursor-pointer`}
+                                                <a href={PAGE_ROUTES.VIEW_RESUME} onClick={handleClick}
+                                                   className={`${
+                                                       active
+                                                           ? "bg-gray-100 text-gray-900"
+                                                           : "text-gray-700"
+                                                   } flex justify-between w-full px-4 py-2 text-sm leading-5 text-left cursor-pointer`}
                                                 >
                                                     View Resume
                                                 </a>
@@ -78,12 +94,12 @@ export default function MobileNavBar() {
                                         </Menu.Item>
                                         <Menu.Item>
                                             {({active}) => (
-                                                <a
-                                                    className={`${
-                                                        active
-                                                            ? "bg-gray-100 text-gray-900"
-                                                            : "text-gray-700"
-                                                    } flex justify-between w-full px-4 py-2 text-sm leading-5 text-left cursor-pointer`}
+                                                <a href={PAGE_ROUTES.ABOUT_ME} onClick={handleClick}
+                                                   className={`${
+                                                       active
+                                                           ? "bg-gray-100 text-gray-900"
+                                                           : "text-gray-700"
+                                                   } flex justify-between w-full px-4 py-2 text-sm leading-5 text-left cursor-pointer`}
                                                 >
                                                     About Me
                                                 </a>
@@ -95,11 +111,11 @@ export default function MobileNavBar() {
                                         <Menu.Item>
                                             {({active}) => (
                                                 <a onClick={() => openInNewTab("https://www.youtube.com/channel/UCI1-IN8JwmFxtY_eVcIATTg")}
-                                                    className={`${
-                                                        active
-                                                            ? "bg-gray-100 text-gray-900"
-                                                            : "text-gray-700"
-                                                    } flex justify-between w-full px-4 py-1 text-sm leading-5 text-left cursor-pointer`}
+                                                   className={`${
+                                                       active
+                                                           ? "bg-gray-100 text-gray-900"
+                                                           : "text-gray-700"
+                                                   } flex justify-between w-full px-4 py-1 text-sm leading-5 text-left cursor-pointer`}
                                                 >
                                                     <YoutubeSVG height={40} width={40}/>
                                                 </a>
@@ -108,11 +124,11 @@ export default function MobileNavBar() {
                                         <Menu.Item>
                                             {({active}) => (
                                                 <a onClick={() => openInNewTab("https://github.com/SaranSundar")}
-                                                    className={`${
-                                                        active
-                                                            ? "bg-gray-100 text-gray-900"
-                                                            : "text-gray-700"
-                                                    } flex justify-between w-full px-4 py-1 text-sm leading-5 text-left cursor-pointer`}
+                                                   className={`${
+                                                       active
+                                                           ? "bg-gray-100 text-gray-900"
+                                                           : "text-gray-700"
+                                                   } flex justify-between w-full px-4 py-1 text-sm leading-5 text-left cursor-pointer`}
                                                 >
                                                     <GithubSVG height={35} width={35}/>
                                                 </a>
@@ -121,11 +137,11 @@ export default function MobileNavBar() {
                                         <Menu.Item>
                                             {({active}) => (
                                                 <a onClick={() => openInNewTab("https://www.linkedin.com/in/saran-sundararajan/")}
-                                                    className={`${
-                                                        active
-                                                            ? "bg-gray-100 text-gray-900"
-                                                            : "text-gray-700"
-                                                    } flex justify-between w-full px-4 py-1 text-sm leading-5 text-left cursor-pointer`}
+                                                   className={`${
+                                                       active
+                                                           ? "bg-gray-100 text-gray-900"
+                                                           : "text-gray-700"
+                                                   } flex justify-between w-full px-4 py-1 text-sm leading-5 text-left cursor-pointer`}
                                                 >
                                                     <LinkedinSVG height={35} width={35}/>
                                                 </a>

@@ -11,7 +11,7 @@ class MyDocument extends Document {
         let showDebugUI = process.env.debug === true ? "debug-screens" : ""
 
         return (
-            <Html>
+            <Html lang="en">
                 <Head>
                     <link rel="stylesheet" href="https://rsms.me/inter/inter.css"/>
                 </Head>

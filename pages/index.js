@@ -1,11 +1,11 @@
 import ProgressiveImageLoader from "components/ProgressiveImageLoader"
 import Link from 'next/link'
-import {PAGE_ROUTES} from "utils/ROUTES";
+import {PAGE_ROUTES} from "utils/Routes";
 
 export default function HomePage() {
 
     return (
-        <div className="relative bg-gray-50">
+        <div className="relative bg-gray-50 w-24 min-w-full">
             <main className="lg:relative">
                 <div className="mx-auto max-w-7xl w-full pt-16 pb-20 text-center lg:py-48 lg:text-left">
                     <div className="px-4 lg:w-1/2 sm:px-8 xl:pr-16">
@@ -14,11 +14,11 @@ export default function HomePage() {
                             <span className="block text-indigo-600">Inventor for life</span>
                         </h1>
                         <p className="mt-3 max-w-md mx-auto text-lg text-gray-500 sm:text-xl md:mt-5 md:max-w-3xl">
-                            I'm passionate about new technology and an advocate for mentoring. Some of my favorite
+                            Nice to meet you, my name is Saran. I'm passionate about new technology and an advocate for mentoring! Some of my favorite
                             projects include a responsive store front for cake pops,
                             automating the scraping of Chinese novels, and creating a new framework
                             to package native desktop apps. I've also recently launched a YouTube channel to teach
-                            Python. Come take a look at who I am and what I've done.
+                            Python. Come take a look at who I am and what I've done!
                         </p>
                         <div className="mt-10 flex justify-center lg:justify-start">
                             <div className="mt-3 rounded-md shadow mt-0 ml-3">

@@ -2,7 +2,7 @@ import GithubSVG from "public/images/navbar/github.svg"
 import YoutubeSVG from "public/images/navbar/youtube.svg"
 import LinkedinSVG from "public/images/navbar/linkedin.svg"
 import Link from 'next/link'
-import {PAGE_ROUTES} from "utils/ROUTES";
+import {PAGE_ROUTES} from "utils/Routes";
 import MobileNavBar from "./MobileNavBar";
 import {openInNewTab} from "utils/Utils";
 
