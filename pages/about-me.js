@@ -22,7 +22,7 @@ export async function getStaticProps() {
     let collageImages = []
     for (let i = 0; i < collageImagesUnsorted.length; i += 2) {
         let mediumImage = collageImagesUnsorted[i]
-        let smallImage = collageImagesUnsorted[i]
+        let smallImage = collageImagesUnsorted[i + 1]
         collageImages.push({'medium': mediumImage['filePath'], 'small': smallImage['filePath']})
     }
     return {
@@ -35,16 +35,15 @@ export async function getStaticProps() {
 export default function AboutMePage({collageImages}) {
 
     const widths = randomShuffle(["w-40", "w-44", "w-48", "w-52", "w-56", "w-60", "w-64", "w-72", "w-80", "w-96"])
-    const colors = randomShuffle(["bg-red-500", "bg-yellow-300", "bg-green-500", "bg-blue-600", "bg-pink-300"])
     const items = randomShuffle(collageImages)
 
     console.log('collage images are')
     console.log(items)
 
-    const ImageContainer = ({imageSrc, width, backgroundColor}) => {
+    const ImageContainer = ({imageSrc, width}) => {
         return (
             <div
-                className={"flex-grow flex-shrink-0 font-black text-3xl mt-0 ml-0 mr-4 mb-4 text-center text-whites " + width + " " + backgroundColor}>
+                className={"flex-grow flex-shrink-0 font-black text-3xl mt-0 ml-0 mr-4 mb-4 text-center text-whites " + width}>
                 <ProgressiveImageLoader
                     src={imageSrc['medium']}
                     placeholder={imageSrc['small']}
@@ -59,8 +58,7 @@ export default function AboutMePage({collageImages}) {
         return (
             <div className="flex flex-wrap" id="masonry-with-columns">
                 {items.map(((value, index) => <ImageContainer key={value['medium']} imageSrc={value}
-                                                              width={widths[index % widths.length]}
-                                                              backgroundColor={colors[index % colors.length]}/>))}
+                                                              width={widths[index % widths.length]}/>))}
             </div>
         )
     }
