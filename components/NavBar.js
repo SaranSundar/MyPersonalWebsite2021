@@ -2,7 +2,7 @@ import GithubSVG from "public/images/navbar/github.svg"
 import YoutubeSVG from "public/images/navbar/youtube.svg"
 import LinkedinSVG from "public/images/navbar/linkedin.svg"
 import Link from 'next/link'
-import ROUTES from "utils/Routes";
+import {PAGE_ROUTES} from "utils/ROUTES";
 
 const NavBar = () => {
 
@@ -18,7 +18,7 @@ const NavBar = () => {
                     <div className="flex justify-between h-16">
                         <div className="flex">
                             <div className="flex-shrink-0 flex items-center">
-                                <Link href={ROUTES.HOME}>
+                                <Link href={PAGE_ROUTES.HOME}>
                                     <a className="inline-flex items-center px-1 pt-1">
                                         <img className="block lg:hidden h-8 w-auto"
                                              src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
@@ -31,19 +31,19 @@ const NavBar = () => {
                             </div>
                             <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
                                 {/* Current: "border-indigo-500 text-gray-900", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" */}
-                                <Link href={ROUTES.EXPLORE_PORTFOLIO}>
+                                <Link href={PAGE_ROUTES.EXPLORE_PORTFOLIO}>
                                     <a
                                         className="border-indigo-500 text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
                                         Explore Portfolio
                                     </a>
                                 </Link>
-                                <Link href={ROUTES.VIEW_RESUME}>
+                                <Link href={PAGE_ROUTES.VIEW_RESUME}>
                                     <a
                                         className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
                                         View Resume
                                     </a>
                                 </Link>
-                                <Link href={ROUTES.ABOUT_ME}>
+                                <Link href={PAGE_ROUTES.ABOUT_ME}>
                                     <a
                                         className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
                                         About Me

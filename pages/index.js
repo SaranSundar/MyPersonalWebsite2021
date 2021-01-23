@@ -1,6 +1,6 @@
 import ProgressiveImageLoader from "components/ProgressiveImageLoader"
 import Link from 'next/link'
-import ROUTES from "utils/Routes";
+import {PAGE_ROUTES} from "utils/ROUTES";
 
 export default function HomePage() {
 
@@ -22,7 +22,7 @@ export default function HomePage() {
                         </p>
                         <div className="mt-10 flex justify-center lg:justify-start">
                             <div className="mt-3 rounded-md shadow mt-0 ml-3">
-                                <Link href={ROUTES.EXPLORE_PORTFOLIO}>
+                                <Link href={PAGE_ROUTES.EXPLORE_PORTFOLIO}>
                                     <a
                                         className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10">
                                         Explore Portfolio
@@ -30,7 +30,7 @@ export default function HomePage() {
                                 </Link>
                             </div>
                             <div className="mt-3 rounded-md shadow mt-0 ml-3">
-                                <Link href={ROUTES.VIEW_RESUME}>
+                                <Link href={PAGE_ROUTES.VIEW_RESUME}>
                                     <a
                                         className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10">
                                         View Resume
