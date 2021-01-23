@@ -46,8 +46,11 @@ const PortfolioPage = (props) => {
                     <h2 className="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl">
                         Saran Sundararajan
                     </h2>
-                    <p className="mt-3 max-w-2xl mx-auto text-xl text-gray-500 sm:mt-4">
+                    <p className="mt-3 sm:mt-4 max-w-2xl mx-auto text-xl text-gray-500">
                         Full-Stack Software Engineer
+                    </p>
+                    <p className="mt-1 sm:mt-2 max-w-2xl mx-auto text-lg text-gray-400">
+                        Web &#xB7; Mobile &#xB7; Desktop &#xB7; IOT
                     </p>
                 </div>
                 <div className="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
