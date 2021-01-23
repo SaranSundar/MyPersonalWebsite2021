@@ -53,7 +53,6 @@ const PortfolioPage = (props) => {
                     <p className="mt-1 sm:mt-2 max-w-2xl mx-auto text-lg text-gray-400">
                         Web &#xB7; Mobile &#xB7; Desktop &#xB7; IOT
                     </p>
-                    <MobileNavBar/>
                 </div>
                 <div className="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
 
