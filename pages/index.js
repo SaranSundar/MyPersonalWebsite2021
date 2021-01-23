@@ -18,7 +18,7 @@ export default function HomePage() {
                             projects include a responsive store front for cake pops,
                             automating the scraping of Chinese novels, and creating a new framework
                             to package native desktop apps. I've also recently launched a YouTube channel to teach kids
-                            Python! Come take a look at who I am and what I've done.
+                            Python! Come and take a look at who I am and what I've done.
                         </p>
                         <div className="mt-10 flex justify-center lg:justify-start">
                             <div className="mt-3 rounded-md shadow mt-0 ml-3">
