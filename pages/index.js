@@ -17,8 +17,8 @@ export default function HomePage() {
                             Hey there! Nice to meet you, my name is Saran. I'm passionate about new technology and an advocate for mentoring! Some of my favorite
                             projects include a responsive store front for cake pops,
                             automating the scraping of Chinese novels, and creating a new framework
-                            to package native desktop apps. I've also recently launched a YouTube channel to teach
-                            Python. Come take a look at who I am and what I've done!
+                            to package native desktop apps. I've also recently launched a YouTube channel to teach kids
+                            Python! Come take a look at who I am and what I've done.
                         </p>
                         <div className="mt-10 flex justify-center lg:justify-start">
                             <div className="mt-3 rounded-md shadow mt-0 ml-3">
