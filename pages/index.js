@@ -7,14 +7,14 @@ export default function HomePage() {
     return (
         <div className="relative bg-gray-50 w-24 min-w-full">
             <main className="lg:relative">
-                <div className="mx-auto max-w-7xl w-full pt-16 pb-20 text-center lg:py-48 lg:text-left">
+                <div className="mx-auto max-w-7xl w-full pt-16 pb-20 text-center lg:py-48">
                     <div className="px-4 lg:w-1/2 sm:px-8 xl:pr-16">
                         <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl lg:text-5xl xl:text-6xl">
-                            <span className="block ">Developer by day</span>
-                            <span className="block text-indigo-600">Inventor for life</span>
+                            <span className="block text-center lg:text-left">Developer by day</span>
+                            <span className="block text-indigo-600 text-center lg:text-left">Inventor for life</span>
                         </h1>
-                        <p className="mt-3 max-w-md mx-auto text-lg text-gray-500 sm:text-xl md:mt-5 md:max-w-3xl">
-                            Nice to meet you, my name is Saran. I'm passionate about new technology and an advocate for mentoring! Some of my favorite
+                        <p className="mt-3 max-w-md text-lg text-gray-500 sm:text-xl md:mt-5 md:max-w-3xl text-left mx-auto">
+                            Hey there! Nice to meet you, my name is Saran. I'm passionate about new technology and an advocate for mentoring! Some of my favorite
                             projects include a responsive store front for cake pops,
                             automating the scraping of Chinese novels, and creating a new framework
                             to package native desktop apps. I've also recently launched a YouTube channel to teach
