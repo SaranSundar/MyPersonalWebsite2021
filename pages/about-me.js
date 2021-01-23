@@ -25,20 +25,18 @@ export async function getStaticProps() {
         let smallImage = collageImagesUnsorted[i + 1]
         collageImages.push({'medium': mediumImage['filePath'], 'small': smallImage['filePath']})
     }
+    collageImages = randomShuffle(collageImages)
+    const widths = randomShuffle(["w-40", "w-44", "w-48", "w-52", "w-56", "w-60", "w-64", "w-72", "w-80", "w-96"])
     return {
         props: {
-            collageImages
+            collageImages,
+            widths
         },
     }
 }
 
-export default function AboutMePage({collageImages}) {
+export default function AboutMePage({collageImages, widths}) {
 
-    const widths = randomShuffle(["w-40", "w-44", "w-48", "w-52", "w-56", "w-60", "w-64", "w-72", "w-80", "w-96"])
-    const items = randomShuffle(collageImages)
-
-    console.log('collage images are')
-    console.log(items)
 
     const ImageContainer = ({imageSrc, width}) => {
         return (
@@ -57,7 +55,7 @@ export default function AboutMePage({collageImages}) {
     const ImageGrid = () => {
         return (
             <div className="flex flex-wrap" id="masonry-with-columns">
-                {items.map(((value, index) => <ImageContainer key={value['medium']} imageSrc={value}
+                {collageImages.map(((value, index) => <ImageContainer key={value['medium']} imageSrc={value}
                                                               width={widths[index % widths.length]}/>))}
             </div>
         )
