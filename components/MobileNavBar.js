@@ -2,6 +2,7 @@ import {Menu, Transition} from "@headlessui/react";
 import GithubSVG from "public/images/navbar/github.svg"
 import YoutubeSVG from "public/images/navbar/youtube.svg"
 import LinkedinSVG from "public/images/navbar/linkedin.svg"
+import CodeSVG from "public/images/navbar/code2.svg"
 import {openInNewTab} from 'utils/Utils'
 import {useRouter} from 'next/router'
 import {PAGE_ROUTES} from "utils/Routes"
@@ -33,13 +34,16 @@ export default function MobileNavBar() {
                                     className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
                                   <span className="sr-only">Open main menu</span>
                                     {/* Icon when menu is closed. */}
+                                    {/*{!open &&*/}
+                                    {/*<svg className="block h-6 w-6"*/}
+                                    {/*     xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"*/}
+                                    {/*     stroke="currentColor" aria-hidden="true">*/}
+                                    {/*    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"*/}
+                                    {/*          d="M4 6h16M4 12h16M4 18h16"/>*/}
+                                    {/*</svg>}*/}
                                     {!open &&
-                                    <svg className="block h-6 w-6"
-                                         xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                         stroke="currentColor" aria-hidden="true">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
-                                              d="M4 6h16M4 12h16M4 18h16"/>
-                                    </svg>}
+                                    <CodeSVG className="block h-8 w-8 mt-1"/>}
+
                                     {/* Icon when menu is open. */}
                                     {open &&
                                     <svg className="block h-6 w-6"
@@ -81,19 +85,6 @@ export default function MobileNavBar() {
                                         </Menu.Item>
                                         <Menu.Item>
                                             {({active}) => (
-                                                <a href={PAGE_ROUTES.VIEW_RESUME} onClick={handleClick}
-                                                   className={`${
-                                                       active
-                                                           ? "bg-gray-100 text-gray-900"
-                                                           : "text-gray-700"
-                                                   } flex justify-between w-full px-4 py-2 text-sm leading-5 text-left cursor-pointer`}
-                                                >
-                                                    View Resume
-                                                </a>
-                                            )}
-                                        </Menu.Item>
-                                        <Menu.Item>
-                                            {({active}) => (
                                                 <a href={PAGE_ROUTES.ABOUT_ME} onClick={handleClick}
                                                    className={`${
                                                        active
@@ -102,6 +93,19 @@ export default function MobileNavBar() {
                                                    } flex justify-between w-full px-4 py-2 text-sm leading-5 text-left cursor-pointer`}
                                                 >
                                                     About Me
+                                                </a>
+                                            )}
+                                        </Menu.Item>
+                                        <Menu.Item>
+                                            {({active}) => (
+                                                <a href={PAGE_ROUTES.VIEW_RESUME} onClick={handleClick}
+                                                   className={`${
+                                                       active
+                                                           ? "bg-gray-100 text-gray-900"
+                                                           : "text-gray-700"
+                                                   } flex justify-between w-full px-4 py-2 text-sm leading-5 text-left cursor-pointer`}
+                                                >
+                                                    View Resume
                                                 </a>
                                             )}
                                         </Menu.Item>
