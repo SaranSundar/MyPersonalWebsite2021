@@ -1,6 +1,7 @@
 import GithubSVG from "public/images/navbar/github.svg"
 import YoutubeSVG from "public/images/navbar/youtube.svg"
 import LinkedinSVG from "public/images/navbar/linkedin.svg"
+import CodeSVG from "public/images/navbar/code2.svg"
 import Link from 'next/link'
 import {PAGE_ROUTES} from "utils/Routes";
 import MobileNavBar from "./MobileNavBar";
@@ -23,12 +24,14 @@ const NavBar = () => {
                             <div className="flex-shrink-0 flex items-center">
                                 <Link href={PAGE_ROUTES.HOME}>
                                     <a className="inline-flex items-center px-1 pt-1" onClick={()=>setActiveLink(PAGE_ROUTES.HOME)}>
-                                        <img className="block lg:hidden h-8 w-auto"
-                                             src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-                                             alt="Workflow"/>
-                                        <img className="hidden lg:block h-8 w-auto"
-                                             src="https://tailwindui.com/img/logos/workflow-logo-indigo-600-mark-gray-800-text.svg"
-                                             alt="Workflow"/>
+                                        {/*<img className="block lg:hidden h-8 w-auto"*/}
+                                        {/*     src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"*/}
+                                        {/*     alt="Workflow"/>*/}
+                                        <CodeSVG className="block lg:hidden h-8 w-auto"/>
+                                        {/*<img className="hidden lg:block h-8 w-auto"*/}
+                                        {/*     src="https://tailwindui.com/img/logos/workflow-logo-indigo-600-mark-gray-800-text.svg"*/}
+                                        {/*     alt="Workflow"/>*/}
+                                        <p className="hidden lg:block font-extrabold text-xl">Intro</p>
                                     </a>
                                 </Link>
                             </div>
