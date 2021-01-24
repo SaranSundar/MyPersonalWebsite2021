@@ -19,14 +19,111 @@ export async function getStaticProps() {
         }
     })
     collageImagesUnsorted.sort()
+    let centerPhoto;
     let collageImages = []
     for (let i = 0; i < collageImagesUnsorted.length; i += 2) {
         let mediumImage = collageImagesUnsorted[i]
         let smallImage = collageImagesUnsorted[i + 1]
-        collageImages.push({'medium': mediumImage['filePath'], 'small': smallImage['filePath']})
+        if (mediumImage['filePath'].includes('newme-medium')) {
+            centerPhoto = {'medium': mediumImage['filePath'], 'small': smallImage['filePath']}
+        } else {
+            collageImages.push({'medium': mediumImage['filePath'], 'small': smallImage['filePath']})
+        }
     }
-    collageImages = randomShuffle(collageImages)
-    const widths = randomShuffle(["w-40", "w-44", "w-48", "w-52", "w-56", "w-60", "w-64", "w-72", "w-80", "w-96"])
+    //collageImages = randomShuffle(collageImages)
+    // This is insert in java script
+    collageImages.splice(5, 0, centerPhoto);
+    collageImages = [
+        {
+            "medium": "/images/about-me/tennis-medium.jpg",
+            "small": "/images/about-me/tennis-small.jpg"
+        },
+        {
+            "medium": "/images/about-me/pokemon2-medium.jpg",
+            "small": "/images/about-me/pokemon2-small.jpg"
+        },
+        {
+            "medium": "/images/about-me/pokemon1-medium.jpg",
+            "small": "/images/about-me/pokemon1-small.jpg"
+        },
+        {
+            "medium": "/images/about-me/snow-medium.jpg",
+            "small": "/images/about-me/snow-small.jpg"
+        },
+        {
+            "medium": "/images/about-me/laptop-medium.jpg",
+            "small": "/images/about-me/laptop-small.jpg"
+        },
+        {
+            "medium": "/images/about-me/newme-medium.jpg",
+            "small": "/images/about-me/newme-small.jpg"
+        },
+        {
+            "medium": "/images/about-me/drinks-medium.jpg",
+            "small": "/images/about-me/drinks-small.jpg"
+        },
+        {
+            "medium": "/images/about-me/grill-food-medium.jpg",
+            "small": "/images/about-me/grill-food-small.jpg"
+        },
+        {
+            "medium": "/images/about-me/Shounen-medium.jpg",
+            "small": "/images/about-me/Shounen-small.jpg"
+        },
+        {
+            "medium": "/images/about-me/games-medium.jpg",
+            "small": "/images/about-me/games-small.jpg"
+        },
+        {
+            "medium": "/images/about-me/computer-medium.jpg",
+            "small": "/images/about-me/computer-small.jpg"
+        },
+        {
+            "medium": "/images/about-me/breakfast-medium.jpg",
+            "small": "/images/about-me/breakfast-small.jpg"
+        }
+    ]
+    let widths = randomShuffle(["w-40", "w-44", "w-48", "w-52", "w-56", "w-60", "w-64", "w-72", "w-80", "w-96"])
+    // widths =
+    // [
+    //   "w-52",
+    //   "w-56",
+    //   "w-44",
+    //   "w-48",
+    //   "w-64",
+    //   "w-40",
+    //   "w-80",
+    //   "w-96",
+    //   "w-72",
+    //   "w-60"
+    // ]
+
+    widths = [
+        "w-44",
+        "w-56",
+        "w-64",
+        "w-80",
+        "w-96",
+        "w-72",
+        "w-60",
+        "w-40",
+        "w-48",
+        "w-52"
+    ]
+
+    // widths = [
+    //   "w-44",
+    //   "w-96",
+    //   "w-64",
+    //   "w-56",
+    //   "w-48",
+    //   "w-80",
+    //   "w-72",
+    //   "w-60",
+    //   "w-40",
+    //   "w-52"
+    // ]
+
     return {
         props: {
             collageImages,
@@ -56,10 +153,13 @@ export default function AboutMePage({collageImages, widths}) {
         return (
             <div className="flex flex-wrap" id="masonry-with-columns">
                 {collageImages.map(((value, index) => <ImageContainer key={value['medium']} imageSrc={value}
-                                                              width={widths[index % widths.length]}/>))}
+                                                                      width={widths[index % widths.length]}/>))}
             </div>
         )
     }
+
+    console.log(collageImages)
+    console.log(widths)
 
     return (
         <div className="relative bg-gray-50 pt-16 pb-20 px-4 sm:px-6 lg:pb-28 lg:px-8">
@@ -68,7 +168,7 @@ export default function AboutMePage({collageImages, widths}) {
             </div>
             <div className="relative max-w-7xl mx-auto">
                 <div className="text-center">
-                    <h2 className="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl">
+                    <h2 className="tracking-tight font-bold text-gray-900 text-4xl">
                         A little about me...
                     </h2>
                 </div>
