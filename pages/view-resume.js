@@ -11,10 +11,10 @@ export default function ResumePage() {
 
     return (
 
-        <div className="relative pb-20 px-4 sm:px-6">
+        <div className="relative bg-gray-50 pb-20 px-4 sm:px-6">
             <div className="relative max-w-7xl mx-auto ">
                 <div className="flex">
-                    <a type="button" href="/images/resume/resume.pdf" download="SaranSundar_Resume.pdf"
+                    <a type="button" href="/images/resume/Saran_Sundar_Resume.pdf" download="Saran_Sundar_Resume.pdf"
                             className="mx-auto inline-flex items-center px-6 py-3 mt-10 mb-1 md:-mb-5 z-50 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                         <svg className="-ml-1 mr-3 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
                              fill="currentColor" aria-hidden="true">
@@ -26,8 +26,8 @@ export default function ResumePage() {
                 </div>
                 <div className="mx-auto max-w-none">
                     <ProgressiveImageLoader
-                        src="/images/resume/Resume-medium.jpg"
-                        placeholder="/images/resume/Resume-small.jpg"
+                        src="/images/resume/resume-medium.jpg"
+                        placeholder="/images/resume/resume-small.jpg"
                         classes="w-full h-full object-cover"
                         alt="Resume"
                     />
