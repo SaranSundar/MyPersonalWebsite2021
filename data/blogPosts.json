@@ -1,29 +1,29 @@
 [
   {
-    "blogType": "Article",
-    "blogTitle": "Boost your conversion rate",
-    "blogDescription": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto accusantium praesentium eius, ut atque fuga culpa, similique sequi cum eos quis dolorum.",
-    "blogThumbnailSrc": "https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80",
+    "blogType": "PritiGood",
+    "blogTitle": "Cake Pops, Cookies, & More!",
+    "blogDescription": "Created for a local bakery with amazing talent and tasty designs. Features a fully responsive randomized image gallery and showcases a selection of delightful treats.",
+    "blogThumbnailSrc": "/images/explore-portfolio/pritigood.png",
     "blogPostingDate": "Mar 16, 2020",
-    "blogReadInMinDuration": "6",
+    "blogReadInMinDuration": "",
     "blogURL": "https://pritigood.surge.sh/"
   },
   {
-    "blogType": "Video",
-    "blogTitle": "How to use search engine optimization to drive sales",
-    "blogDescription": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit facilisasperiores porro quaerat doloribus, eveniet dolore. Adipisci tempora autinventore optio animi., tempore temporibus quo laudantium.",
-    "blogThumbnailSrc": "https://images.unsplash.com/photo-1547586696-ea22b4d4235d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80",
+    "blogType": "AutoNavigator",
+    "blogTitle": "Buy your dream car today!",
+    "blogDescription": "Worked on user testing and launch of new 2.0 experience in Angular and React with NextJS.",
+    "blogThumbnailSrc": "/images/explore-portfolio/autonavigator.png",
     "blogPostingDate": "Mar 10, 2020",
-    "blogReadInMinDuration": "4",
-    "blogURL": "https://pritigood.surge.sh/"
+    "blogReadInMinDuration": "",
+    "blogURL": "https://www.capitalone.com/cars/"
   },
   {
-    "blogType": "Case Study",
-    "blogTitle": "Improve your customer experience",
-    "blogDescription": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint harum rerumvoluptatem quo recusandae magni placeat saepe molestiae, sed excepturicumque corporis perferendis hic.",
-    "blogThumbnailSrc": "https://images.unsplash.com/photo-1492724441997-5dc865305da7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80",
+    "blogType": "Netnology.io",
+    "blogTitle": "Manage your Projects more effectively!",
+    "blogDescription": "Created custom time management portal to log hours on projects and get reports with various automation on progress and road blocks.",
+    "blogThumbnailSrc": "/images/explore-portfolio/netnology.png",
     "blogPostingDate": "Feb 12, 2020",
-    "blogReadInMinDuration": "11",
-    "blogURL": "https://pritigood.surge.sh/"
+    "blogReadInMinDuration": "",
+    "blogURL": "https://tpm-dashboard-7a6cf.firebaseapp.com/"
   }
 ]

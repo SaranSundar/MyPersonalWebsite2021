@@ -40,7 +40,7 @@ export default function BlogPost({
                               &#xB7;
                             </span>
                         <span>
-                            {blogReadInMinDuration} min read
+                            {blogReadInMinDuration} {blogReadInMinDuration !== "" ? "min read": ""}
                         </span>
                     </div>
                 </div>
