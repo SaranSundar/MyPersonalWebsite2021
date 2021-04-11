@@ -5,7 +5,6 @@ import useSWR from "swr";
 import fs from 'fs';
 import path from 'path';
 import {API_ROUTES} from "utils/Routes";
-import MobileNavBar from "../components/MobileNavBar";
 
 const fetcher = url => fetch(url).then(r => r.json())
 

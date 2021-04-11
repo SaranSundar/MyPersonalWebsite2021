@@ -6,7 +6,8 @@ export default function BlogPost({
                                      "                            quis dolorum.",
                                      blogThumbnailSrc = "https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80",
                                      blogPostingDate = "Mar 16, 2020",
-                                     blogReadInMinDuration = "6"
+                                     blogReadInMinDuration = "6",
+                                     blogURL = "/"
                                  }) {
     return (
 
@@ -19,11 +20,11 @@ export default function BlogPost({
             <div className="flex-1 bg-white p-6 flex flex-col justify-between">
                 <div className="flex-1">
                     <p className="text-sm font-medium text-indigo-600">
-                        <a href="/" className="hover:underline">
+                        <a href={blogURL} className="hover:underline">
                             {blogType}
                         </a>
                     </p>
-                    <a href="/" className="block mt-2">
+                    <a href={blogURL} className="block mt-2">
                         <p className="text-xl font-semibold text-gray-900">
                             {blogTitle}
                         </p>
